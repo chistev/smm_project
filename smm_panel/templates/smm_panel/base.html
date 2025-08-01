@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}SocialBoost{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <nav class="flex items-center justify-between px-8 py-4 border-b">
+        <div class="text-lg font-bold">SocialBoost</div>
+        <div class="flex items-center space-x-8 text-sm">
+            <a href="#" class="text-gray-800 hover:text-gray-600">API</a>
+            <a href=""
+               class="px-4 py-2 bg-blue-100 text-gray-900 font-semibold rounded-full hover:bg-blue-200 transition">LOGIN</a>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="border-t mt-16 py-6 text-center text-sm text-gray-500">
+        &copy; {% now "Y" %} SocialBoost. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
