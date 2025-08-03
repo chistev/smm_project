@@ -1,0 +1,42 @@
+{% extends 'smm_panel/base.html' %}
+{% block title %}Login - SocialBoost{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-md space-y-6">
+        <h2 class="text-center text-2xl font-bold">Login to Your Account</h2>
+        <form action="{% url 'login' %}" method="post" class="space-y-4">
+            {% csrf_token %}
+            <div>
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <input id="email" name="email" type="text" required
+                    class="mt-1 w-full px-4 py-2 border rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium">Password</label>
+                <input id="password" name="password" type="password" required
+                    class="mt-1 w-full px-4 py-2 border rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input id="remember" name="remember" type="checkbox"
+                        class="h-4 w-4 text-blue-600 border-gray-300 rounded" />
+                    <label for="remember" class="ml-2 block text-sm text-gray-700">Remember Me</label>
+                </div>
+                <a href="#" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white font-semibold py-2 rounded-full hover:bg-blue-700 transition">
+                Login
+            </button>
+
+        </form>
+        <p class="text-sm text-center text-gray-600">
+            Don't have an account?
+            <a href="{% url 'signup' %}" class="text-blue-600 hover:underline">Sign Up</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

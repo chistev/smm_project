@@ -6,6 +6,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}SocialBoost{% endblock %}</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+        }
+    </style>
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -16,7 +33,7 @@
         <div class="flex items-center space-x-8 text-sm">
             <a href="#" class="text-gray-800 hover:text-gray-600">API</a>
             <a href=""
-               class="px-4 py-2 bg-blue-100 text-gray-900 font-semibold rounded-full hover:bg-blue-200 transition">LOGIN</a>
+                class="px-4 py-2 bg-blue-100 text-gray-900 font-semibold rounded-full hover:bg-blue-200 transition">LOGIN</a>
         </div>
     </nav>
 
