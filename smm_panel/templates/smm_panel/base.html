@@ -29,10 +29,12 @@
 <body class="bg-white text-gray-900">
 
     <nav class="flex items-center justify-between px-8 py-4 border-b">
-        <div class="text-lg font-bold">SocialBoost</div>
+        <a href="{% url 'home' %}" class="text-lg font-bold hover:text-gray-600 transition">
+            SocialBoost
+        </a>
         <div class="flex items-center space-x-8 text-sm">
             <a href="#" class="text-gray-800 hover:text-gray-600">API</a>
-            <a href=""
+            <a href="{% url 'login' %}"
                 class="px-4 py-2 bg-blue-100 text-gray-900 font-semibold rounded-full hover:bg-blue-200 transition">LOGIN</a>
         </div>
     </nav>
