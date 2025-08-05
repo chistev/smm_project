@@ -15,3 +15,6 @@ def forgot_password(request):
         # TODO: Add password reset logic here (e.g., send reset link)
         return render(request, 'smm_panel/forgot_password.html', {'message': 'If the email exists, a reset link has been sent.'})
     return render(request, 'smm_panel/forgot_password.html')
+
+def terms(request):
+    return render(request, 'smm_panel/terms.html')
